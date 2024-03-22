@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="LMS Website Sign up Page ">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Noor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div>
+        <h1 class="heading1">Welcome to <strong class="firstword-color1">Learn</strong> <strong class="secondword-color1">Skill</strong></h1>
+        <p class="beforesignup-greeting">Unlock a world of knowledge and skill-building. Sign up to access a wide range of courses and resources. Join our community of learners today!</p>
+        <form name="signupform" action="continue.html" onsubmit="return validateform()">
+            <div class="details-container">
+                <label for="email" class="email-container">EMAIL</label><br>
+                <input type="email" id="email" name="email" size="30" class="email-box" placeholder="name@gmail.com" autocomplete="off" required><br>
+                <label for="password" class="password-container">PASSWORD</label><br>
+                <input type="password" id="password" name="password" size="30" class="password-box" placeholder="Enter your password" autocomplete="off" required><br>
+                <input type="submit" value="Sign up" class="signup-container1">
+            </div>
+        </form>
+    </div>
+    <script>
+    function validateform(){
+            var email = document.signupform.email.value
+            var password = document.signupform.password.value
+
+            if(email==""){
+                alert("Email can't be blank");
+                return false;
+            }
+            else if(password.length<8){
+                alert("Password should contain minimum 8 characters.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
